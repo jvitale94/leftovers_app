@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.jakevitale.leftovers_app.home">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:onClick="goToStore"
+        app:srcCompat="@drawable/web_store_icon_hd"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:onClick="goToDressingRoom"
+        app:srcCompat="@drawable/dressing_room_icon_hd"
+        style="?android:attr/borderlessButtonStyle"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/leftovers_logo_img"
+        android:layout_marginTop="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/button5"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:onClick="goToPastLookBooks"
+        app:srcCompat="@drawable/lookbooks_icon_hd"
+        style="?android:attr/borderlessButtonStyle"
+        android:scaleType="fitCenter"/>
+
+    />
+</RelativeLayout>
