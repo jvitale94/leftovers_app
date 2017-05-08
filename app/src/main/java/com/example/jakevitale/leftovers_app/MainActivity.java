@@ -130,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
                     if (view.getId() == R.id.ImageView) {
                         // txt4.setText("TextView is dragged");
                         Log.d("Item you're trying on", "Beanie");
-                        find_face(v);
                     } else if (view.getId() == R.id.ImageView2) {
                         Log.d("Item you're trying on", "Coin Tee Black");
                     } else if (view.getId() == R.id.ImageView3) {
@@ -142,12 +141,13 @@ public class MainActivity extends AppCompatActivity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    find_face(v);
                     //Log.d("drop", "beendropped");
                     // ImageView dropTarget = (ImageView) v;
-                    View v2 = (View) event.getLocalState();
+                    //View v2 = (View) event.getLocalState();
                     //Log.d("v", v.toString());
                     //Log.d("v2", v2.toString());
-                    v2.setVisibility(View.INVISIBLE);
+                    //v2.setVisibility(View.INVISIBLE);
                     break;
 
             }
@@ -245,11 +245,6 @@ public class MainActivity extends AppCompatActivity {
 
             double colxd = facesArray[0].br().x;
             int colx = (int) colxd;
-
-            Log.d("DIMS", String.valueOf(rowy));
-            Log.d("DIMS", String.valueOf(ycoord));
-            Log.d("DIMS", String.valueOf(xcoord));
-            Log.d("DIMS", String.valueOf(colx));
 
             resize(m, m, new Size(colx-xcoord, ycoord-rowy), 0,0,INTER_CUBIC);
 
